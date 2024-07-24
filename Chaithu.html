@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Portfolio</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #f4f4f4;
+        }
+
+        header {
+            background: #333;
+            color: #fff;
+            padding: 10px 0;
+            text-align: center;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin: 0 10px;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        .container {
+            width: 80%;
+            margin: 0 auto;
+        }
+
+        section {
+            padding: 20px 0;
+        }
+
+        .intro {
+            text-align: center;
+            padding: 50px 0;
+            background: #fff;
+        }
+
+        .intro h1 {
+            margin: 0;
+        }
+
+        .intro img {
+            border-radius: 50%;
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+            margin-top: 20px;
+        }
+
+        .skills, .projects, .resume, .contact {
+            background: #fff;
+            padding: 20px;
+            margin: 20px 0;
+        }
+
+        .skills ul, .projects ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .skills ul li, .projects ul li {
+            background: #333;
+            color: #fff;
+            margin: 5px;
+            padding: 10px;
+            border-radius: 5px;
+            display: inline-block;
+        }
+
+        .resume-download {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            background: #333;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+
+        .contact form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .contact form input, .contact form textarea {
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .contact form input[type="submit"] {
+            background: #333;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Student Portfolio</h1>
+        <nav>
+            <ul>
+                <li><a href="#intro">Home</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#resume">Resume</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+        <section id="intro" class="intro">
+            <h1>Satya Krishna Gunnam</h1>
+            <p>Hi! I'm a student learning web development. Here's a showcase of my work and skills.</p>
+            <img src="C:\Users\VELAG\OneDrive\Documents\77DC6219-FD96-49F6-BDC3-0DD882FBCC8A.JPG" alt="Profile Photo">
+        </section>
+
+        <section id="skills" class="skills">
+            <h2>Skills</h2>
+            <ul>
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>JavaScript</li>
+                <li>C++</li>
+                <li>C</li>
+            </ul>
+        </section>
+
+        <section id="projects" class="projects">
+            <h2>Projects</h2>
+            <ul>
+                <li>
+                    <h3>Project 1</h3>
+                    <p>Age Calucator</p>
+                </li>
+                <li>
+                    <h3>Project 2</h3>
+                    <p>Weather App</p>
+                </li>
+                <li>
+                    <h3>Project 3</h3>
+                    <p>Vechice Selling Website</p>
+                </li>
+            </ul>
+        </section>
+
+        <section id="resume" class="resume">
+            <h2>Resume</h2>
+            <p>Download my resume to learn more about my education and experience.</p>
+            <a href="path/to/your-resume.pdf" class="resume-download" download>Download Resume</a>
+        </section>
+
+        <section id="contact" class="contact">
+            <h2>Contact</h2>
+            <form id="contactForm">
+                <input type="text" id="name" name="name" placeholder="Your Name" required>
+                <input type="email" id="email" name="email" placeholder="Your Email" required>
+                <textarea id="message" name="message" placeholder="Your Message" rows="4" required></textarea>
+                <input type="submit" value="Submit">
+            </form>
+        </section>
+    </div>
+
+    <script>
+        document.getElementById('contactForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            alert('Thank you for your message, ' + document.getElementById('name').value + '!');
+        });
+    </script>
+</body>
+</html>
